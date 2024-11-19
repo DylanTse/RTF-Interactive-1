@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <title>Duck on Water</title>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Sky -->
+      <a-sky color="#87CEEB"></a-sky>
+
+      <!-- Water -->  
+      <a-plane 
+        color="#1E90FF" 
+        height="50" 
+        width="50" 
+        rotation="-90 0 0" 
+        position="0 0 0">
+      </a-plane>
+
+      <!-- Duck -->
+      <a-gltf-model 
+        src="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Duck/glTF/Duck.gltf" 
+        scale="0.5 0.5 0.5" 
+        position="0 0.5 0">
+      </a-gltf-model>
+
+      <!-- Clouds -->
+      <a-sphere 
+        color="#FFFFFF" 
+        radius="2" 
+        position="-3 5 -3" 
+        scale="1 0.6 1">
+      </a-sphere>
+      <a-sphere 
+        color="#FFFFFF" 
+        radius="2" 
+        position="3 6 -6" 
+        scale="1.2 0.8 1.2">
+      </a-sphere>
+      <a-sphere 
+        color="#FFFFFF" 
+        radius="2" 
+        position="1 4 -4" 
+        scale="1.1 0.7 1.1">
+      </a-sphere>
+      <a-sphere 
+        color="#FFFFFF" 
+        radius="2" 
+        position="-1 5 -4" 
+        scale="1.1 0.7 1.1">
+      </a-sphere>
+
+      <!-- 3D Text -->
+      <a-text 
+        value="WASD to move" 
+        color="#000000" 
+        position="5 2 -3" 
+        scale="5 5 5">
+      </a-text>
+
+      <a-text 
+      value="Dylan Tse | RTF 329C" 
+      color="#000000" 
+      position="5 4 -3" 
+      scale="5 5 5">
+    </a-text>
+
+
+      <!-- Camera -->
+      <a-entity 
+        camera 
+        position="0 2 10" 
+        look-controls
+        wasd-controls="acceleration: 50">
+      </a-entity>
+
+
+    </a-scene>
+  </body>
+</html>
